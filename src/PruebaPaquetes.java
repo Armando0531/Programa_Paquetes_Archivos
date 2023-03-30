@@ -20,6 +20,10 @@ public class PruebaPaquetes {
 		Piramide prm = new Piramide(4,7);
 		System.out.println(prm.obtenerVolumen());
 		System.out.println(prm.obtenerArea());
+		
+		Cono cn = new Cono(5,8);
+		System.out.println(cn.obtenerVolumen());
+		System.out.println(cn.obtenerArea());
 
 	}
 
