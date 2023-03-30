@@ -1,10 +1,35 @@
 package edu.tecjerez.topicos.figuras.dosDimensiones;
 
 public class Elipse {
+	
+	private double radio1;
+	private double radio2;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Elipse(double radio1, double radio2) {
+		this.radio1 = radio1;
+		this.radio2 = radio2;
 	}
+
+	public double obtenerArea() {
+		return getRadio1()*getRadio2()*Math.PI;
+	}
+	public double obtenerPerimetro() {
+		return 2*Math.PI*Math.sqrt((Math.pow(getRadio1(), 2)+(Math.pow(getRadio2(), 2)))/2);
+	}
+
+	public double getRadio1() {
+		return radio1;
+	}
+	public void setRadio1(double radio1) {
+		this.radio1 = radio1;
+	}
+	public double getRadio2() {
+		return radio2;
+	}
+	public void setRadio2(double radio2) {
+		this.radio2 = radio2;
+	}
+	
+	
 
 }
