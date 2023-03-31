@@ -14,10 +14,10 @@ public class Circulo {
 		return 2*Math.PI*getRadio();
 	}
 
-	public double getRadio() {
+	protected double getRadio() {
 		return radio;
 	}
-	public void setRadio(double radio) {
+	protected void setRadio(double radio) {
 		this.radio = radio;
 	}
 

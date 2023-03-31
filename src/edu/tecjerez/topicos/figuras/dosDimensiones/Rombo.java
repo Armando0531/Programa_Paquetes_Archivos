@@ -17,16 +17,16 @@ public class Rombo {
 		return Math.sqrt(Math.pow(getBase()/2, 2)+Math.pow(getAltura()/2, 2))*4;
 	}
 
-	public double getBase() {
+	protected double getBase() {
 		return base;
 	}
-	public void setBase(double base) {
+	protected void setBase(double base) {
 		this.base = base;
 	}
-	public double getAltura() {
+	protected double getAltura() {
 		return altura;
 	}
-	public void setAltura(double altura) {
+	protected void setAltura(double altura) {
 		this.altura = altura;
 	}
 

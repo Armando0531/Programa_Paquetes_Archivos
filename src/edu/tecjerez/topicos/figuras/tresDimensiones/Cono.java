@@ -19,16 +19,16 @@ public class Cono {
 	}
 
 
-	public double getRadio() {
+	protected double getRadio() {
 		return radio;
 	}
-	public void setRadio(double radio) {
+	protected void setRadio(double radio) {
 		this.radio = radio;
 	}
-	public double getAltura() {
+	protected double getAltura() {
 		return altura;
 	}
-	public void setAltura(double altura) {
+	protected void setAltura(double altura) {
 		this.altura = altura;
 	}
 

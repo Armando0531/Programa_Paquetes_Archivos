@@ -17,16 +17,16 @@ public class Elipse {
 		return 2*Math.PI*Math.sqrt((Math.pow(getRadio1(), 2)+(Math.pow(getRadio2(), 2)))/2);
 	}
 
-	public double getRadio1() {
+	protected double getRadio1() {
 		return radio1;
 	}
-	public void setRadio1(double radio1) {
+	protected void setRadio1(double radio1) {
 		this.radio1 = radio1;
 	}
-	public double getRadio2() {
+	protected double getRadio2() {
 		return radio2;
 	}
-	public void setRadio2(double radio2) {
+	protected void setRadio2(double radio2) {
 		this.radio2 = radio2;
 	}
 	

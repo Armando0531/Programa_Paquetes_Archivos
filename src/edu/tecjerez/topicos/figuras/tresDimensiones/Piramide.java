@@ -18,16 +18,16 @@ public class Piramide {
 		return getRaizBase()*(2*ap+getRaizBase());
 	}
 
-	public double getRaizBase() {
+	protected double getRaizBase() {
 		return raizBase;
 	}
-	public void setRaizBase(double raizBase) {
+	protected void setRaizBase(double raizBase) {
 		this.raizBase = raizBase;
 	}
-	public double getAltura() {
+	protected double getAltura() {
 		return altura;
 	}
-	public void setAltura(double altura) {
+	protected void setAltura(double altura) {
 		this.altura = altura;
 	}
 
