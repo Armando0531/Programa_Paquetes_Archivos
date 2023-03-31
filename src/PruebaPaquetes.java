@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.text.DecimalFormat;
 
 import javax.swing.*;
@@ -34,12 +37,36 @@ class Paquetes extends JFrame implements ActionListener{
 		inst(parametro1, 0, 1, 2, 1, GridBagConstraints.NONE);
 		caja1 = new JTextField(5);
 		inst(caja1, 2, 1, 2, 1, GridBagConstraints.NONE);
+		
+		caja1.addKeyListener((KeyListener) new KeyAdapter() {//validacion
+			public void keyPressed(KeyEvent ke) {
+				String value = caja1.getText();
+				int code=ke.getKeyCode();
+				if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')	||	(!value.contains(".")&&ke.getKeyChar()=='.') || (code==KeyEvent.VK_BACK_SPACE)) {
+					caja1.setEditable(true);
+				}else{
+					caja1.setEditable(false);
+				}
+			}
+		});
 
 
 		parametro2 = new JLabel("Parametro 2");
 		inst(parametro2, 0, 2, 2, 1, GridBagConstraints.NONE);
 		caja2 = new JTextField(5);
 		inst(caja2, 2, 2, 2, 1, GridBagConstraints.NONE);
+		
+		caja2.addKeyListener(new KeyAdapter() {//validacion
+			public void keyPressed(KeyEvent ke) {
+				String value = caja2.getText();
+				int code=ke.getKeyCode();
+				if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')	||	(!value.contains(".")&&ke.getKeyChar()=='.') || (code==KeyEvent.VK_BACK_SPACE)) {
+					caja2.setEditable(true);
+				}else{
+					caja2.setEditable(false);
+				}
+			}
+		});
 
 		inst(new JLabel("Calcular"), 4, 0, 1, 3, GridBagConstraints.NONE);
 
@@ -182,26 +209,6 @@ class Paquetes extends JFrame implements ActionListener{
 public class PruebaPaquetes {
 
 	public static void main(String[] args) {
-		
-		Rombo rmb = new Rombo(5, 6);
-		/*System.out.println(rmb.obtenerArea());
-		System.out.println(rmb.obtenerPerimetro());
-
-		Circulo crc = new Circulo(1);
-		System.out.println(crc.obtenerArea());
-		System.out.println(crc.obtenerPerimetro());
-		
-		Elipse elp = new Elipse(5,2);
-		System.out.println(elp.obtenerArea());
-		System.out.println(elp.obtenerPerimetro());
-		
-		Piramide prm = new Piramide(4,7);
-		System.out.println(prm.obtenerVolumen());
-		System.out.println(prm.obtenerArea());
-		
-		Cono cn = new Cono(5,8);
-		System.out.println(cn.obtenerVolumen());
-		System.out.println(cn.obtenerArea());*/
 		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
