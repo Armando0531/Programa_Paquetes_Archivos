@@ -13,6 +13,8 @@ class Paquetes extends JFrame implements ActionListener{
 
 	JComboBox<String> comboTipo = new JComboBox<String>();
 	JButton area,perimetro,volumen;
+	JLabel parametro1, parametro2;
+	JTextField caja1, caja2,txtbArea,txtbPerimetro,txtbVolumen;
 
 	public Paquetes() {
 		getContentPane().setLayout(gbl);
@@ -24,21 +26,41 @@ class Paquetes extends JFrame implements ActionListener{
 
 		String tipos[] = {"Rombo","Circulo","Elipse","Piramide","Cono"};
 		comboTipo = new JComboBox(tipos);
-		inst(comboTipo, 0, 0, 3, 3, GridBagConstraints.NONE);
+		inst(comboTipo, 0, 0, 4, 1, GridBagConstraints.NONE);
 
-		inst(new JLabel("Calcular"), 3, 0, 1, 3, GridBagConstraints.NONE);
+		parametro1 = new JLabel("Parametro 1");
+		inst(parametro1, 0, 1, 2, 1, GridBagConstraints.NONE);
+		caja1 = new JTextField(5);
+		inst(caja1, 2, 1, 2, 1, GridBagConstraints.NONE);
+
+
+		parametro2 = new JLabel("Parametro 2");
+		inst(parametro2, 0, 2, 2, 1, GridBagConstraints.NONE);
+		caja2 = new JTextField(5);
+		inst(caja2, 2, 2, 2, 1, GridBagConstraints.NONE);
+
+		inst(new JLabel("Calcular"), 4, 0, 1, 3, GridBagConstraints.NONE);
 
 		area = new JButton("Area");
 		area.addActionListener(this);
-		inst(area, 6, 0, 2, 1, GridBagConstraints.NONE);
+		inst(area, 5, 0, 2, 1, GridBagConstraints.NONE);
+
+		txtbArea = new JTextField(5);
+		inst(txtbArea, 7, 0, 2, 1, GridBagConstraints.NONE);
 
 		perimetro = new JButton("Perimetro");
 		perimetro.addActionListener(this);
-		inst(perimetro, 6, 1, 2, 1, GridBagConstraints.NONE);
+		inst(perimetro, 5, 1, 2, 1, GridBagConstraints.NONE);
+
+		txtbPerimetro = new JTextField(5);
+		inst(txtbPerimetro, 7, 1, 2, 1, GridBagConstraints.NONE);
 
 		volumen = new JButton("Volumen");
 		volumen.addActionListener(this);
-		inst(volumen, 6, 2, 2, 1, GridBagConstraints.NONE);
+		inst(volumen, 5, 2, 2, 1, GridBagConstraints.NONE);
+
+		txtbVolumen = new JTextField(5);
+		inst(txtbVolumen, 7, 2, 2, 1, GridBagConstraints.NONE);
 
 
 		pack();
